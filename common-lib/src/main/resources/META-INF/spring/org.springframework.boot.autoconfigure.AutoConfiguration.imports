@@ -1,0 +1,6 @@
+com.projects.razorpay.common_lib.idempotency.SharedResilienceAutoConfiguration
+com.projects.razorpay.common_lib.audit.SharedAuditAutoConfiguration
+com.projects.razorpay.common_lib.config.SharedKafkaAutoConfiguration
+com.projects.razorpay.common_lib.util.SharedSecurityAutoConfiguration
+com.projects.razorpay.common_lib.exceptions.GlobalExceptionHandler
+com.projects.razorpay.common_lib.web.SharedWebFilterAutoConfiguration

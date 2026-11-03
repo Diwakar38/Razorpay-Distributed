@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-service
+
+  cloud:
+    config.server.git:
+      uri: https://github.com/Diwakar38/distributed-razorpay-config
+      username: Diwakar38
+      password: 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
+      default-label: main
+
+server:
+  port: 8888
