@@ -78,4 +78,13 @@ public class GatewayAuthFilter extends OncePerRequestFilter {
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         objectMapper.writeValue(response.getWriter(), Map.of("errorCode", errorCode, "errorDescription", message));
     }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+
+        return path.equals("/actuator/health")
+                || path.equals("/actuator/info")
+                || path.equals("/actuator/prometheus");
+    }
 }

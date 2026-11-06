@@ -127,7 +127,7 @@ public class SettlementTransactionExecutor {
             settlement.setProcessedAt(LocalDateTime.now());
             settlementRepository.save(settlement);
 
-            List<SettlementPayment> settlementPaymentList = settlementRepository.findBySettlement(settlement);
+            List<SettlementPayment> settlementPaymentList = settlementPaymentRepository.findBySettlement(settlement);
             List<UUID> paymentIds = settlementPaymentList.stream()
                     .map(SettlementPayment::getId)
                     .map(SettlementPaymentId::getPaymentId)
